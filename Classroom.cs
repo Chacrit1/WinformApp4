@@ -16,6 +16,7 @@ namespace WinFormsApp4
         public void addStudent(Student students)
         {
             StudentList.Add(students);
+            YearList.Add(students.Year);
 
         }
         public string ShowStudent()
@@ -29,10 +30,7 @@ namespace WinFormsApp4
         }
         public int ShowAllAge()
         {
-            foreach (var student in StudentList)
-            {
-                YearList.Add(student.Year);
-            }
+           
             return YearList.Sum();
         }
 
